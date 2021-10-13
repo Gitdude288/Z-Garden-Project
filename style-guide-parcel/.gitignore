@@ -120,3 +120,4 @@ dist
 # custom for WDD 331
 *.css
 build
+.DS_Store
