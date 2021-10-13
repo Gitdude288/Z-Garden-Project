@@ -1,8 +1,8 @@
 main > h1 {
-  color: $color-7;
+  color: $color-4;
 
   @include MQ(L) {
     /* title goes into the header on big devices */
-    color: $color-3;
+    color: darken($color-8, 20%);
   }
 }
