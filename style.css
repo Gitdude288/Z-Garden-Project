@@ -1,0 +1,39 @@
+body {
+	box-sizing: border-box;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	width: 800px;
+	height: 100%;
+}
+
+.intro {
+	width: 100%;
+	order: 1;
+}
+
+.main {
+	width: 62.5%;
+	order: 3;
+}
+
+.sidebar {
+	width: 37.5%;
+	order: 2;
+}
+
+@media (max-width: 400px) {
+	.intro {
+	    width: 100%;
+	}
+
+    .main {
+	    width: 100%;
+    }
+
+	.sidebar {
+		width: 100%;
+	}
+}
