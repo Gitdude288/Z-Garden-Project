@@ -23,6 +23,9 @@ body {
 	width: 37.5%;
 	order: 2;
 }
+/*
+Comment
+*/
 
 @media (max-width: 400px) {
 	.intro {
