@@ -1,5 +1,7 @@
 body {
   box-sizing: border-box;
+  margin: auto;
+  max-width: 600px;
 }
 
 .page-wrapper {
@@ -29,10 +31,6 @@ body {
 
 /* Mobile first; Desktop last */
 @media (min-width: 52em) {
-  .body {
-    margin-left: 500px;
-  }
-
   .main {
     width: 62.5%;
   }
