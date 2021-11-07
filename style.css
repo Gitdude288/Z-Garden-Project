@@ -16,6 +16,8 @@ body {
 
 .main {
 	width: 62.5%;
+	float: left;
+	font-size: 5vw;
 	order: 3;
 }
 
@@ -27,13 +29,16 @@ body {
 Comment
 */
 
-@media (max-width: 400px) {
+@media (min-width: 400px) {
 	.intro {
 	    width: 100%;
 	}
 
     .main {
 	    width: 100%;
+		font-size: 5vw;
+		display: grid;
+		float: left;
     }
 
 	.sidebar {
