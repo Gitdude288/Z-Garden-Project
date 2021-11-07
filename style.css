@@ -142,6 +142,45 @@ ul {
     width: 37.5%;
   }
 
+  .wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+  
+  .design-archives {
+	  text-align: left;
+  }
+  
+  .zen-resources {
+	  text-align: left;
+  }
+  
+  .select,
+  .archives,
+  .resources {
+	  margin: 10px 0;
+  }
+  
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+	  width: 100%;
+  }
+  
+  .design-selection > nav,
+  .design-archives > nav,
+  .zen-resources > ul {
+	  display: block;
+  }
+  
+  .select:hover + nav,
+  .archives:hover + nav,
+  .resources:hover + ul {
+	  display: block;
+  }
+
   header,
   .summary {
     margin-bottom: 0.5em;
