@@ -76,6 +76,44 @@ header,
   order: 2;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-between;
+}
+
+.design-archives {
+	text-align: center;
+}
+
+.zen-resources {
+	text-align: right;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+	width: 33.3%;
+}
+
+.design-selection > nav,
+.design-archives > nav,
+.zen-resources > ul {
+	display: none;
+}
+
+.select:hover + nav,
+.archives:hover + nav,
+.resources:hover + ul {
+	display: block;
+}
+
 /* Mobile first; Desktop last */
 @media (min-width: 52em) {
   .main {
