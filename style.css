@@ -71,6 +71,10 @@ header,
 .main {
   order: 3;
 }
+.explanation, .participation, .benefits, .requirements{
+  outline: black 1px solid;
+  padding: 1em;
+}
 
 .sidebar {
   order: 2;
