@@ -72,6 +72,19 @@ header,
   }
 }
 
+[role=banner] {
+  h1 {
+    font-family: Saira;
+    font-weight: 600; /* SEMI BOLD */
+    color: $color-7;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  h2 {
+    font-family: Lato;
+  }
+}
+
 @include MQ(M) {
   header,
   .summary {
