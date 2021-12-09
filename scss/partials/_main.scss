@@ -1,0 +1,17 @@
+.main {
+  order: $bottom;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  outline: 1px solid black;
+  padding: 1em;
+}
+
+@include MQ(M) {
+  .main {
+    width: $w-middle;
+  }
+}
