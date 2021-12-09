@@ -1,0 +1,38 @@
+@import 'partials/reset';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+xVariables 
+-------------------------------- */
+@import 'partials/variables';
+
+/* -------------------------------- 
+xBackground 
+-------------------------------- */
+@import 'partials/background';
+
+/* -------------------------------- 
+xIntro 
+-------------------------------- */
+@import 'partials/introduction';
+
+/* -------------------------------- 
+xNavigation 
+-------------------------------- */
+@import 'partials/navigation-sidebar';
+
+/* -------------------------------- 
+xMain 
+-------------------------------- */
+@import 'partials/main';
+
+/* -------------------------------- 
+xTypography 
+-------------------------------- */
+@import 'partials/typography';
+
+/* -------------------------------- 
+xBasic Style 
+-------------------------------- */
+@import 'partials/basic-style';
