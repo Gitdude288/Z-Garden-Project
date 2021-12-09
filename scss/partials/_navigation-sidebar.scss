@@ -1,0 +1,89 @@
+.sidebar {
+  order: $middle;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.design-archives {
+  text-align: center;
+}
+
+.zen-resources {
+  text-align: right;
+}
+
+.select,
+.archives,
+.resources {
+  margin: 10px 0 0;
+}
+
+.design-seletion,
+.design-archives,
+.zen-resources {
+  width: 33.3%;
+}
+
+.design-selection > nav,
+.design-archives > nav,
+.zen-resources > ul {
+  display: none;
+}
+
+.select:hover + nav,
+.archives:hover + nav,
+.resources:hover + ul {
+  display: block;
+}
+
+.design-selection > nav:hover,
+.design-archives > nav:hover,
+.zen-resources > nav:hover {
+  display: block;
+}
+
+@include MQ(M) {
+  .sidebar {
+    width: $w-sm;
+  }
+
+  .wrapper {
+    width: $w-big;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .design-archives,
+  .zen-resources {
+    text-align: left;
+  }
+
+  .select,
+  .archives,
+  .resources {
+    margin: 10px 0;
+  }
+
+  .design-selection,
+  .design-archives,
+  .zen-resources {
+    width: $w-big;
+  }
+
+  .design-selection > nav,
+  .design-archives > nav,
+  .zen-resources > ul {
+    display: block;
+  }
+
+  .select:hover + nav,
+  .archives:hover + nav,
+  .resources:hover + ul {
+    display: block;
+  }
+}
