@@ -1,0 +1,101 @@
+@mixin preambleWidthSizes($h3, $p1, $p2, $p3) {
+  .preamble h3 {
+    font-size: $h3;
+  }
+
+  .preamble p:nth-of-type(1) {
+    font-size: $p1;
+  }
+
+  .preamble p:nth-of-type(2) {
+    font-size: $p2;
+  }
+
+  .preamble p:nth-of-type(3) {
+    font-size: $p3;
+  }
+}
+
+@mixin preamble($viewport-width) {
+  @if $viewport-width == $bp-middle {
+    @media (min-width: $bp-middle) {
+      @include preambleWidthSizes(0.6vw, 0.9vw, 1.2vw, 1.5vw);
+    }
+  }
+  @else if $viewport-width == $bp-biggest {
+    @media (min-width: $bp-biggest) {
+      @include preambleWidthSizes(0.4vw, 0.7vw, 1vw, 1.3vw);
+    } 
+  }
+}
+
+.intro {
+  order: $top;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header,
+.summary,
+.preamble {
+  flex: 1;
+}
+
+header,
+.summary {
+  flex: 0 0 $w-big;
+  outline: 1px solid black;
+  margin-bottom: $mar-sm;
+  padding: 0 1em;
+}
+
+.preamble {
+  margin-top: 1em;
+  flex: 0 0 $w-big;
+  text-align: start;
+  h3 {
+    margin: 0 5% 0 84%;
+    font-size: 0.8vw;
+    text-align: right;
+  }
+  p:nth-of-type(1) {
+    margin: 0 10% 0 50%;
+    font-size: 1.1vw;
+  }
+  p:nth-of-type(2) {
+    margin: 0 20% 0 25%;
+    font-size: 1.4vw;
+  }
+  p:nth-of-type(3) {
+    margin: 0 36% 0 0;
+    font-size: 1.7vw;
+  }
+}
+
+@include MQ(M) {
+  header,
+  .summary {
+    margin-bottom: $mar-sm;
+  }
+
+  .preamble {
+    flex: 0 0 $w-big;
+    text-align: end;
+    h3 {
+      margin-left: 0.5%;
+      text-align: left;
+    }
+    p:nth-of-type(1) {
+      margin: 0 56% 0 4%;
+    }
+    p:nth-of-type(2) {
+      margin: 0 25% 0 20%;
+    }
+    p:nth-of-type(3) {
+      margin: 0 0 0 36%;
+    }
+  }
+}
+
+@include preamble($bp-middle);
+@include preamble($bp-biggest);

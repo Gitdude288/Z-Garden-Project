@@ -1,0 +1,30 @@
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+
+*,
+*::after,
+*::before {
+	@include box-sizing(border-box);
+}
+
+body {
+  margin: auto;
+  width: $w-big;
+  max-width: $bp-main;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: $w-big;
+  margin: $mar-sm;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
