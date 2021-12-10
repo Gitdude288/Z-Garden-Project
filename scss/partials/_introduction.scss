@@ -77,25 +77,38 @@ header,
 }
 
 .preamble {
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   flex: 0 0 $w-big;
   text-align: start;
   h3 {
     margin: 0 5% 0 84%;
     font-size: 0.8vw;
     text-align: right;
+    background: linear-gradient(180deg, rgba(153, 153, 153, 0.26) 0%, rgba(137, 137, 137, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   p:nth-of-type(1) {
     margin: 0 10% 0 50%;
     font-size: 1.1vw;
+    background: linear-gradient(180deg, rgba(137, 137, 137, 0) 0%, #6C6C6C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
   p:nth-of-type(2) {
     margin: 0 20% 0 25%;
     font-size: 1.4vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.31) 0%, #9A9A9A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
   p:nth-of-type(3) {
     margin: 0 36% 0 0;
     font-size: 1.7vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.47) 0%, #FFFEFE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
 }
 
