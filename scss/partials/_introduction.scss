@@ -44,9 +44,12 @@ header,
 header,
 .summary {
   flex: 0 0 $w-big;
-  outline: 1px solid black;
   margin-bottom: $mar-sm;
   padding: 0 1em;
+}
+
+.summary {
+  outline: 1px solid black;
 }
 
 .preamble {
@@ -72,6 +75,32 @@ header,
   }
 }
 
+[role=banner] {
+  h1 {
+    font-family: Saira;
+    font-weight: 600; /* SEMI BOLD */
+    color: $color-7;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    font-size: 3.575em;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 18px;
+    margin: auto;
+    left: 0;
+    outline: 3px solid $color-1;
+    border-radius: 5px;
+  }
+}
+
+
 @include MQ(M) {
   header,
   .summary {
@@ -93,6 +122,28 @@ header,
     }
     p:nth-of-type(3) {
       margin: 0 0 0 36%;
+    }
+  }
+  
+  [role=banner] {
+    h1 {
+      font-size: 5.875em;
+    }
+    h1::after {
+      height: 60%;
+      top: 30px;
+    }
+    h2 {
+      font-family: Lato;
+      font-size: 1em;
+      letter-spacing: 0.93em;
+      font-weight: 900;
+      color: $color-7;
+      text-align: right;
+      margin-top: -28px;
+      margin-right: -7px;
+      margin-bottom: 15px;
+      z-index: 1;
     }
   }
 }
