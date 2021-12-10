@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin preambleWidthSizes($h3, $p1, $p2, $p3) {
   .preamble h3 {
     font-size: $h3;
@@ -71,7 +73,7 @@ header,
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
   top: 30;
-  left: random(100) / 100;
+  left: calc(random(100) / 100);
   animation: shoot 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -88,7 +90,7 @@ header::after {
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
   top: 250;
-  left: random(100) / 100;
+  left: calc(random(100) / 100);
   animation: shoot-again 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -104,7 +106,7 @@ header::after {
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
   top: 150;
-  left: random(100) / 100;
+  left: calc(random(100) / 100);
   animation: shoot-again-again 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -261,30 +263,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(random(100) / 100 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 1;
   }
   12% {
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 0;
   }
   45% {
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 0;
   }
   46% { 
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%); 
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 1;
   }
   91% { opacity: 0; }
@@ -293,30 +295,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(random(100) / 100 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 1;
   }
   12% {
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 0;
   }
   45% {
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 0;
   }
-  46% { 
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%); 
+  46% {
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 1;
   }
   91% { opacity: 0; }
@@ -325,30 +327,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(random(100) / 100 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 1;
   }
   12% {
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 0;
   }
   45% {
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 0;
   }
   46% { 
-    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%); 
+    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
     opacity: 1;
   }
   91% { opacity: 0; }
