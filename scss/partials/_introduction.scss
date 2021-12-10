@@ -61,6 +61,57 @@ header,
   }
 }
 
+/* shooting star */
+.summary::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 30;
+  left: random(100) / 100;
+  animation: shoot 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+
+
+header::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 250;
+  left: random(100) / 100;
+  animation: shoot-again 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+
+.preamble::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 150;
+  left: random(100) / 100;
+  animation: shoot-again-again 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+
 .summary p:nth-of-type(1) {
   color: $color-3;
   font-size: 1.6vw;
@@ -204,6 +255,103 @@ header,
       z-index: 1;
     }
   }
+}
+
+@keyframes shoot {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate(random(100) / 100 * -100%, random(100) / 100 * 100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%); 
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
+}
+@keyframes shoot-again {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate(random(100) / 100 * 100%, random(100) / 100 * -100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%); 
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
+}
+@keyframes shoot-again-again {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate(random(100) / 100 * -100%, random(100) / 100 * 100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate(random(1000) / 1000 * 100%, random(100) / 100 * -100%); 
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate(random(1000) / 1000 * -100%, random(100) / 100 * 100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
 }
 
 @include preamble($bp-middle);
