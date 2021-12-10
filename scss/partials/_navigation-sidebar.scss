@@ -20,6 +20,8 @@
 .archives,
 .resources {
   margin: 10px 0 0;
+  color: $color-7;
+  font: $primary-font;
 }
 
 .design-seletion,
@@ -32,6 +34,12 @@
 .design-archives > nav,
 .zen-resources > ul {
   display: none;
+
+  & li a:link {
+    color: $color-7;
+    transition: color 100ms ease-in;
+    text-decoration: none;
+  } 
 }
 
 .select:hover + nav,
@@ -42,8 +50,13 @@
 
 .design-selection > nav:hover,
 .design-archives > nav:hover,
-.zen-resources > nav:hover {
+.zen-resources > ul:hover {
   display: block;
+
+  & li a:hover {
+    color: $color-9;
+    cursor: pointer;
+  }
 }
 
 @include MQ(M) {
