@@ -20,14 +20,15 @@
 .archives,
 .resources {
   margin: 10px 0 0;
-  color: $color-7;
+  color: $color-3;
   font: $primary-font;
 }
 
-.design-seletion,
-.design-archives,
+.design-selection,
+//.design-archives,
 .zen-resources {
   width: 33.3%;
+  flex-grow: 1;
 }
 
 .design-selection > nav,
@@ -35,7 +36,7 @@
 .zen-resources > ul {
   display: none;
 
-  & li a:link {
+  & li, a:link {
     color: $color-7;
     transition: color 100ms ease-in;
     text-decoration: none;
@@ -53,9 +54,8 @@
 .zen-resources > ul:hover {
   display: block;
 
-  & li a:hover {
-    color: $color-9;
-    cursor: pointer;
+  & a:hover {
+    color: $color-1;
   }
 }
 
@@ -79,7 +79,7 @@
   .select,
   .archives,
   .resources {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .design-selection,
