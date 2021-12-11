@@ -9,6 +9,34 @@
   outline: 1px solid black;
   padding: 1em;
 }
+.explanation{
+  background-color: $color-5;
+  opacity: 0.69;
+}
+.participation{
+  background-color: $color-6;
+  opacity: 0.4;
+}
+.benefits{
+  background-color: $color-4;
+  opacity: 0.33;
+}
+.requirements{
+  background-color: $color-8;
+  opacity: 0.56;
+}
+.explanation h3, .benefits h3, .requirements h3, .participation h3{
+  font-size: 18px;
+  opacity: 1;
+  color: $color-7;
+}
+.explanation p, .benefits p, .requirements p, .participation p{
+  opacity: 1;
+  color: $color-7;
+}
+.participation a{
+  color: white;
+}
 
 @include MQ(M) {
   .main {
