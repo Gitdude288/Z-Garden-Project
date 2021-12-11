@@ -263,30 +263,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   12% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0;
   }
   45% {
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 0;
   }
   46% { 
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   91% { opacity: 0; }
@@ -295,30 +295,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   12% {
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0;
   }
   45% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 0;
   }
-  46% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+  46% { 
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   91% { opacity: 0; }
@@ -327,30 +327,30 @@ header::after {
   0% { opacity: 0; }
   9% { opacity: 0; }
   10% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   12% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0;
   }
   45% {
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 0;
   }
   46% { 
-    transform: translate(math.div(random(100), 100) * 100%, math.div(random(100), 100) * -100%);
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
     opacity: 1;
   }
   47% {
     opacity: 0;
   }
   89% { 
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 0; 
   }
   90% {
-    transform: translate(math.div(random(100), 100) * -100%, math.div(random(100), 100) * 100%);
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
     opacity: 1;
   }
   91% { opacity: 0; }
