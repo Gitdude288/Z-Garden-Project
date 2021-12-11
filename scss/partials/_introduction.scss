@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin preambleWidthSizes($h3, $p1, $p2, $p3) {
   .preamble h3 {
     font-size: $h3;
@@ -49,29 +51,117 @@ header,
 }
 
 .summary {
-  outline: 1px solid black;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, $color-1, transparent);
+  background-image: linear-gradient(to bottom, black, transparent);
+  border-image-slice: 1;
+  background-origin: border-box;
+  p {
+    font-family: Lato;
+  }
+}
+
+/* shooting star */
+.summary::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 30;
+  left: calc(random(100) / 100);
+  animation: shoot 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+
+
+header::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 250;
+  left: calc(random(100) / 100);
+  animation: shoot-again 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+
+.preamble::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
+  z-index: 2;
+  top: 150;
+  left: calc(random(100) / 100);
+  animation: shoot-again-again 20s ease infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+
+.summary p:nth-of-type(1) {
+  color: $color-3;
+  font-size: 1.6vw;
+}
+
+.summary p:nth-of-type(2) {
+  color: $color-2;
+  font-size: 1.6vw;
+  margin-top: -1.8%;
+  a {
+    text-decoration: none;
+    color: $color-2;
+  }
 }
 
 .preamble {
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   flex: 0 0 $w-big;
   text-align: start;
   h3 {
     margin: 0 5% 0 84%;
     font-size: 0.8vw;
     text-align: right;
+    background: linear-gradient(180deg, rgba(153, 153, 153, 0.26) 0%, rgba(137, 137, 137, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   p:nth-of-type(1) {
     margin: 0 10% 0 50%;
     font-size: 1.1vw;
+    background: linear-gradient(180deg, rgba(137, 137, 137, 0) 0%, #6C6C6C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
   p:nth-of-type(2) {
     margin: 0 20% 0 25%;
     font-size: 1.4vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.31) 0%, #9A9A9A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
   p:nth-of-type(3) {
     margin: 0 36% 0 0;
     font-size: 1.7vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.47) 0%, #FFFEFE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
   }
 }
 
@@ -83,20 +173,32 @@ header,
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-align: right;
-    margin: 0;
+    margin: auto;
     position: relative;
-    font-size: 3.575em;
+    font-size: 11vw;
   }
   h1::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: calc(100vw - 36px);
     height: 60%;
-    top: 18px;
-    margin: auto;
+    top: 20%;
+    margin-left: -16px;
     left: 0;
     outline: 3px solid $color-1;
-    border-radius: 5px;
+    border-radius: 2px;
+  }
+  h2 {
+    font-family: Lato;
+    font-size: 1.9vw;
+    letter-spacing: 0.93em;
+    font-weight: 900;
+    color: $color-7;
+    text-align: right;
+    margin-top: -3.4%;
+    margin-right: -0.9%;
+    margin-bottom: 1.5%;
+    z-index: 1;
   }
 }
 
@@ -105,6 +207,13 @@ header,
   header,
   .summary {
     margin-bottom: $mar-sm;
+    p:nth-of-type(1) {
+      font-size: 14px;
+    }
+    p:nth-of-type(2) {
+      font-size: 14px;
+      margin-top: -1.5vh;
+    }
   }
 
   .preamble {
@@ -130,8 +239,10 @@ header,
       font-size: 5.875em;
     }
     h1::after {
+      width: 104.1%;
       height: 60%;
       top: 30px;
+      margin-left: -2%;
     }
     h2 {
       font-family: Lato;
@@ -146,6 +257,103 @@ header,
       z-index: 1;
     }
   }
+}
+
+@keyframes shoot {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
+}
+@keyframes shoot-again {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
+}
+@keyframes shoot-again-again {
+  0% { opacity: 0; }
+  9% { opacity: 0; }
+  10% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  12% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 0;
+  }
+  46% { 
+    transform: translate((random(100)/100) * 100%, (random(100)/100) * -100%);
+    opacity: 1;
+  }
+  47% {
+    opacity: 0;
+  }
+  89% { 
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 0; 
+  }
+  90% {
+    transform: translate((random(100)/100) * -100%, (random(100)/100) * 100%);
+    opacity: 1;
+  }
+  91% { opacity: 0; }
 }
 
 @include preamble($bp-middle);

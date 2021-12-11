@@ -1,11 +1,13 @@
 .sidebar {
   order: $middle;
+  z-index: 100;
 }
 
 .wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .design-archives {
@@ -22,10 +24,16 @@
   margin: 10px 0 0;
   color: $color-3;
   font: $primary-font;
+  opacity: .7;
+  transition: opacity 300ms ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .design-selection,
-//.design-archives,
+.design-archives,
 .zen-resources {
   width: 33.3%;
   flex-grow: 1;
@@ -47,12 +55,14 @@
 .archives:hover + nav,
 .resources:hover + ul {
   display: block;
+  //margin-bottom: 10px;
 }
 
 .design-selection > nav:hover,
 .design-archives > nav:hover,
 .zen-resources > ul:hover {
   display: block;
+  //margin-bottom: 10px;
 
   & a:hover {
     color: $color-1;
