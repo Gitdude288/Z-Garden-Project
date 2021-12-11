@@ -7,6 +7,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .design-archives {
@@ -32,7 +33,7 @@
 }
 
 .design-selection,
-//.design-archives,
+.design-archives,
 .zen-resources {
   width: 33.3%;
   flex-grow: 1;
@@ -54,12 +55,14 @@
 .archives:hover + nav,
 .resources:hover + ul {
   display: block;
+  //margin-bottom: 10px;
 }
 
 .design-selection > nav:hover,
 .design-archives > nav:hover,
 .zen-resources > ul:hover {
   display: block;
+  //margin-bottom: 10px;
 
   & a:hover {
     color: $color-1;
