@@ -38,3 +38,13 @@ ul {
 abbr {
   text-decoration: none;
 }
+
+a {
+  color: $color-7;
+  transition: color 100ms ease-in;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-1;
+}
