@@ -82,8 +82,8 @@ $s-star-default: 300px;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 30;
-  left: calc(random(100) / 100);
+  top: 30px;
+  left: random(100) + vw;
   animation: shoot 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -99,14 +99,15 @@ header::after {
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 250;
-  left: calc(random(100) / 100);
+  top: 250px;
+  left: random(100) + vw;
   animation: shoot-again 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 
+/* shooting star #3 */
 .preamble::after {
   content: '';
   position: absolute;
@@ -115,8 +116,8 @@ header::after {
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 150;
-  left: calc(random(100) / 100);
+  top: 150px;
+  left: random(100) + vw;
   animation: shoot-again-again 20s ease infinite;
   opacity: 0;
   animation-fill-mode: forwards;
