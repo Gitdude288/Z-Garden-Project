@@ -1,37 +1,34 @@
 .main {
   order: $bottom;
+  z-index: 101;
 }
 
 .explanation,
 .participation,
 .benefits,
 .requirements {
-  outline: 1px solid black;
+  outline: 1px solid gainsboro;
   padding: 1em;
 }
 .explanation{
-  background-color: $color-5;
-  opacity: 0.69;
+  background-color: rgba(21, 47, 74, 0.69);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .participation{
-  background-color: $color-6;
-  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .benefits{
-  background-color: $color-4;
-  opacity: 0.33;
+  background-color: rgba(193, 222, 219, 0.20);
 }
 .requirements{
-  background-color: $color-8;
-  opacity: 0.56;
+  background-color: rgba(160, 51, 45, 0.25);
 }
 .explanation h3, .benefits h3, .requirements h3, .participation h3{
   font-size: 18px;
-  opacity: 1;
   color: $color-7;
 }
 .explanation p, .benefits p, .requirements p, .participation p{
-  opacity: 1;
   color: $color-7;
 }
 .participation a{

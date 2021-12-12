@@ -21,7 +21,7 @@
 .select,
 .archives,
 .resources {
-  margin: 10px 0 0;
+  margin: 0;
   color: $color-3;
   font: $primary-font;
   opacity: .7;
@@ -36,13 +36,26 @@
 .design-archives,
 .zen-resources {
   width: 33.3%;
+  margin-top: -3vh;
   flex-grow: 1;
+  max-height: 0;
+  transition: max-height 500ms ease-out;
+}
+
+.design-selection:hover,
+.design-archives:hover,
+.zen-resources:hover{
+  max-height: 500px;
+  transition: max-height 500ms ease-in;
 }
 
 .design-selection > nav,
 .design-archives > nav,
 .zen-resources > ul {
-  display: none;
+  visibility: hidden;
+  transition: all 0.5s linear;
+  opacity: 0;
+  margin-bottom: -17vh;
 
   & li, a:link {
     color: $color-7;
@@ -54,16 +67,19 @@
 .select:hover + nav,
 .archives:hover + nav,
 .resources:hover + ul {
-  display: block;
-  //margin-bottom: 10px;
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 10px;
 }
 
 .design-selection > nav:hover,
 .design-archives > nav:hover,
 .zen-resources > ul:hover {
-  display: block;
-  //margin-bottom: 10px;
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 10px;
 
+  display: block;
   & a:hover {
     color: $color-1;
   }
@@ -95,18 +111,31 @@
   .design-selection,
   .design-archives,
   .zen-resources {
+    max-height: 500px;
+    margin-top: 0;
     width: $w-big;
   }
 
   .design-selection > nav,
   .design-archives > nav,
   .zen-resources > ul {
+    visibility: visible;
     display: block;
+    opacity: 1;
+    margin-bottom: 0;
   }
 
   .select:hover + nav,
   .archives:hover + nav,
   .resources:hover + ul {
     display: block;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  .design-selection > nav:hover,
+  .design-archives > nav:hover,
+  .zen-resources > ul:hover {
+    margin-bottom: 0;
   }
 }
