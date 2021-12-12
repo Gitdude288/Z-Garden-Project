@@ -7,7 +7,7 @@
 .participation,
 .benefits,
 .requirements {
-  outline: 1px solid gainsboro;
+  outline: 1px solid black;
   padding: 1em;
 }
 .explanation{
@@ -23,6 +23,8 @@
 }
 .requirements{
   background-color: rgba(160, 51, 45, 0.25);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .explanation h3, .benefits h3, .requirements h3, .participation h3{
   font-size: 18px;
