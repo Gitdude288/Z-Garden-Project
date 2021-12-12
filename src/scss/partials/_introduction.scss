@@ -82,7 +82,7 @@ $s-star-default: 300px;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 30;
+  top: 30px;
   left: calc(random(100) / 100);
   animation: shoot 20s ease infinite;
   opacity: 0;
@@ -99,7 +99,7 @@ header::after {
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 250;
+  top: 250px;
   left: calc(random(100) / 100);
   animation: shoot-again 20s ease infinite;
   opacity: 0;
@@ -115,7 +115,7 @@ header::after {
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
-  top: 150;
+  top: 150px;
   left: calc(random(100) / 100);
   animation: shoot-again-again 20s ease infinite;
   opacity: 0;
