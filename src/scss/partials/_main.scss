@@ -1,3 +1,9 @@
+/* -------------------------------- 
+
+xMain
+
+-------------------------------- */
+
 .main {
   order: $bottom;
   z-index: 101;
@@ -35,6 +41,10 @@
 }
 .participation a{
   color: white;
+}
+
+footer a {
+  margin: 0 1.5em;
 }
 
 @include MQ(M) {

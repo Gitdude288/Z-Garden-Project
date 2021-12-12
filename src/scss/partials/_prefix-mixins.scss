@@ -1,3 +1,9 @@
+/* -------------------------------- 
+
+xPrefix Mixins
+
+-------------------------------- */
+
 @mixin box-sizing($type) {
      -webkit-box-sizing: $type;
   -moz-box-sizing: $type;

@@ -1,4 +1,8 @@
-@use "sass:math";
+/* -------------------------------- 
+
+xIntroduction
+
+-------------------------------- */
 
 @mixin preambleWidthSizes($h3, $p1, $p2, $p3) {
   .preamble h3 {
@@ -43,15 +47,19 @@ header,
   flex: 1;
 }
 
+$padding-sm: 1em;
+
 header,
 .summary {
   flex: 0 0 $w-big;
   margin-bottom: $mar-sm;
-  padding: 0 1em;
+  padding: 0 $padding-sm;
 }
 
+$border-sm;
+
 .summary {
-  border-width: 2px;
+  border-width: $border-sm;
   border-color: transparent;
   border-style: solid;
   border-image: linear-gradient(to bottom, $color-1, transparent);
@@ -63,12 +71,14 @@ header,
   }
 }
 
-/* shooting star */
+$s-star-default: 300px;
+
+/* shooting star  #1 */
 .summary::after {
   content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: $s-star-default;
+  height: $s-start-default;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
@@ -80,12 +90,12 @@ header,
   animation-delay: 8s;
 }
 
-
+/* shooting star #2 */
 header::after {
   content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: $s-star-default;
+  height: $s-star-default;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
@@ -100,8 +110,8 @@ header::after {
 .preamble::after {
   content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: $s-star-default;
+  height: $s-star-default;
   background: rgb(255,255,255);
   background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(248,0,255,1) 2%, rgba(239,0,255,0) 4%);
   z-index: 2;
@@ -113,15 +123,16 @@ header::after {
   animation-delay: 2s;
 }
 
+$font-sm: 1.6vw;
 
 .summary p:nth-of-type(1) {
   color: $color-3;
-  font-size: 1.6vw;
+  font-size: $font-sm;
 }
 
 .summary p:nth-of-type(2) {
   color: $color-2;
-  font-size: 1.6vw;
+  font-size: $font-sm;
   margin-top: -1.8%;
   a {
     text-decoration: none;
@@ -129,9 +140,11 @@ header::after {
   }
 }
 
+$mar-intro-pre: 3em;
+
 .preamble {
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: $mar-intro-pre;
+  margin-bottom: $mar-intro-pre;
   flex: 0 0 $w-big;
   text-align: start;
   h3 {
@@ -165,6 +178,8 @@ header::after {
   }
 }
 
+$font-lg: 11vw;
+
 [role=banner] {
   h1 {
     font-family: Saira;
@@ -175,7 +190,7 @@ header::after {
     text-align: right;
     margin: auto;
     position: relative;
-    font-size: 11vw;
+    font-size: $font-lg;
   }
   h1::after {
     content: "";
